@@ -1,5 +1,6 @@
 ﻿using QuanLy.DAO;
 using QuanLy.DTO;
+using QuanLyQuanCafe.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using Menu = QuanLy.DTO.Menu;
 
 namespace QuanLy
 {
@@ -30,6 +32,9 @@ namespace QuanLy
                 Button btn = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight };
                 btn.Text = item.Name + Environment.NewLine + item.Status;
 
+                btn.Click += btn_Click;
+                btn.Tag = item;
+
                 switch (item.Status)
                 {
                     case "Trống":
@@ -44,10 +49,31 @@ namespace QuanLy
             }
         }
 
+        void ShowBill(int id)
+        {
 
+            listHoaDon.Items.Clear();
+            List<Menu> lisBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
+            foreach(Menu item in lisBillInfo)
+            {
+                ListViewItem listViewItem = new ListViewItem(item.FoodName.ToString());
+                listViewItem.SubItems.Add(item.Count.ToString());
+                listViewItem.SubItems.Add(item.Price.ToString());
+                listViewItem.SubItems.Add(item.TotalPrice.ToString());
+
+
+                listHoaDon.Items.Add(listViewItem);
+            }
+        }
         #endregion
 
         #region Events
+
+        void btn_Click(object sender, EventArgs e)
+        {
+            int tableID = ((sender as Button).Tag as Table).ID;
+            ShowBill(tableID);
+        }
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();

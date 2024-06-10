@@ -47,6 +47,10 @@
             this.cbThucAn = new System.Windows.Forms.ComboBox();
             this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.flowTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -63,7 +67,7 @@
             this.thôngTinTàiKhoảnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1005, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1075, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,17 +106,24 @@
             this.panel2.Controls.Add(this.listHoaDon);
             this.panel2.Location = new System.Drawing.Point(565, 157);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(428, 365);
+            this.panel2.Size = new System.Drawing.Size(498, 365);
             this.panel2.TabIndex = 2;
             // 
             // listHoaDon
             // 
+            this.listHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listHoaDon.GridLines = true;
             this.listHoaDon.HideSelection = false;
             this.listHoaDon.Location = new System.Drawing.Point(6, 25);
             this.listHoaDon.Name = "listHoaDon";
-            this.listHoaDon.Size = new System.Drawing.Size(419, 326);
+            this.listHoaDon.Size = new System.Drawing.Size(477, 326);
             this.listHoaDon.TabIndex = 0;
             this.listHoaDon.UseCompatibleStateImageBehavior = false;
+            this.listHoaDon.View = System.Windows.Forms.View.Details;
             // 
             // panel3
             // 
@@ -234,11 +245,31 @@
             this.flowTable.Size = new System.Drawing.Size(527, 601);
             this.flowTable.TabIndex = 5;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên món";
+            this.columnHeader1.Width = 117;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số lượng";
+            this.columnHeader2.Width = 103;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn giá";
+            this.columnHeader3.Width = 85;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 108;
+            // 
             // QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 667);
+            this.ClientSize = new System.Drawing.Size(1075, 714);
             this.Controls.Add(this.flowTable);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -280,5 +311,9 @@
         private System.Windows.Forms.NumericUpDown ggcount;
         private System.Windows.Forms.Button btnGiamGia;
         private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
