@@ -34,25 +34,25 @@
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.listHoaDon = new System.Windows.Forms.ListView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cbDanhMuc = new System.Windows.Forms.ComboBox();
-            this.cbThucAn = new System.Windows.Forms.ComboBox();
-            this.btnThemMon = new System.Windows.Forms.Button();
-            this.numCount = new System.Windows.Forms.NumericUpDown();
-            this.flowTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnThanhToan = new System.Windows.Forms.Button();
-            this.btnGiamGia = new System.Windows.Forms.Button();
-            this.ggcount = new System.Windows.Forms.NumericUpDown();
-            this.cbChuyenBan = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnChuyenBan = new System.Windows.Forms.Button();
+            this.cbChuyenBan = new System.Windows.Forms.ComboBox();
+            this.ggcount = new System.Windows.Forms.NumericUpDown();
+            this.btnGiamGia = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.numCount = new System.Windows.Forms.NumericUpDown();
+            this.btnThemMon = new System.Windows.Forms.Button();
+            this.cbThucAn = new System.Windows.Forms.ComboBox();
+            this.cbDanhMuc = new System.Windows.Forms.ComboBox();
+            this.flowTable = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ggcount)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ggcount)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -86,14 +86,14 @@
             // thôngTinCáNhânToolStripMenuItem
             // 
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
             this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -104,6 +104,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(428, 365);
             this.panel2.TabIndex = 2;
+            // 
+            // listHoaDon
+            // 
+            this.listHoaDon.HideSelection = false;
+            this.listHoaDon.Location = new System.Drawing.Point(6, 25);
+            this.listHoaDon.Name = "listHoaDon";
+            this.listHoaDon.Size = new System.Drawing.Size(419, 326);
+            this.listHoaDon.TabIndex = 0;
+            this.listHoaDon.UseCompatibleStateImageBehavior = false;
             // 
             // panel3
             // 
@@ -117,14 +126,51 @@
             this.panel3.Size = new System.Drawing.Size(428, 99);
             this.panel3.TabIndex = 3;
             // 
-            // listHoaDon
+            // btnChuyenBan
             // 
-            this.listHoaDon.HideSelection = false;
-            this.listHoaDon.Location = new System.Drawing.Point(6, 25);
-            this.listHoaDon.Name = "listHoaDon";
-            this.listHoaDon.Size = new System.Drawing.Size(419, 326);
-            this.listHoaDon.TabIndex = 0;
-            this.listHoaDon.UseCompatibleStateImageBehavior = false;
+            this.btnChuyenBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuyenBan.Location = new System.Drawing.Point(15, 12);
+            this.btnChuyenBan.Name = "btnChuyenBan";
+            this.btnChuyenBan.Size = new System.Drawing.Size(109, 43);
+            this.btnChuyenBan.TabIndex = 5;
+            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.UseVisualStyleBackColor = true;
+            // 
+            // cbChuyenBan
+            // 
+            this.cbChuyenBan.FormattingEnabled = true;
+            this.cbChuyenBan.Location = new System.Drawing.Point(15, 61);
+            this.cbChuyenBan.Name = "cbChuyenBan";
+            this.cbChuyenBan.Size = new System.Drawing.Size(109, 24);
+            this.cbChuyenBan.TabIndex = 2;
+            // 
+            // ggcount
+            // 
+            this.ggcount.Location = new System.Drawing.Point(177, 63);
+            this.ggcount.Name = "ggcount";
+            this.ggcount.Size = new System.Drawing.Size(96, 22);
+            this.ggcount.TabIndex = 4;
+            this.ggcount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnGiamGia
+            // 
+            this.btnGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiamGia.Location = new System.Drawing.Point(177, 14);
+            this.btnGiamGia.Name = "btnGiamGia";
+            this.btnGiamGia.Size = new System.Drawing.Size(96, 43);
+            this.btnGiamGia.TabIndex = 4;
+            this.btnGiamGia.Text = "Giảm Giá";
+            this.btnGiamGia.UseVisualStyleBackColor = true;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.Location = new System.Drawing.Point(318, 14);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(96, 71);
+            this.btnThanhToan.TabIndex = 3;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -136,32 +182,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(428, 111);
             this.panel4.TabIndex = 4;
-            // 
-            // cbDanhMuc
-            // 
-            this.cbDanhMuc.FormattingEnabled = true;
-            this.cbDanhMuc.Location = new System.Drawing.Point(15, 12);
-            this.cbDanhMuc.Name = "cbDanhMuc";
-            this.cbDanhMuc.Size = new System.Drawing.Size(258, 24);
-            this.cbDanhMuc.TabIndex = 0;
-            // 
-            // cbThucAn
-            // 
-            this.cbThucAn.FormattingEnabled = true;
-            this.cbThucAn.Location = new System.Drawing.Point(15, 59);
-            this.cbThucAn.Name = "cbThucAn";
-            this.cbThucAn.Size = new System.Drawing.Size(258, 24);
-            this.cbThucAn.TabIndex = 1;
-            // 
-            // btnThemMon
-            // 
-            this.btnThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMon.Location = new System.Drawing.Point(279, 12);
-            this.btnThemMon.Name = "btnThemMon";
-            this.btnThemMon.Size = new System.Drawing.Size(96, 71);
-            this.btnThemMon.TabIndex = 2;
-            this.btnThemMon.Text = "Thêm Món";
-            this.btnThemMon.UseVisualStyleBackColor = true;
             // 
             // numCount
             // 
@@ -180,58 +200,39 @@
             0,
             0});
             // 
+            // btnThemMon
+            // 
+            this.btnThemMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMon.Location = new System.Drawing.Point(279, 12);
+            this.btnThemMon.Name = "btnThemMon";
+            this.btnThemMon.Size = new System.Drawing.Size(96, 71);
+            this.btnThemMon.TabIndex = 2;
+            this.btnThemMon.Text = "Thêm Món";
+            this.btnThemMon.UseVisualStyleBackColor = true;
+            // 
+            // cbThucAn
+            // 
+            this.cbThucAn.FormattingEnabled = true;
+            this.cbThucAn.Location = new System.Drawing.Point(15, 59);
+            this.cbThucAn.Name = "cbThucAn";
+            this.cbThucAn.Size = new System.Drawing.Size(258, 24);
+            this.cbThucAn.TabIndex = 1;
+            // 
+            // cbDanhMuc
+            // 
+            this.cbDanhMuc.FormattingEnabled = true;
+            this.cbDanhMuc.Location = new System.Drawing.Point(15, 12);
+            this.cbDanhMuc.Name = "cbDanhMuc";
+            this.cbDanhMuc.Size = new System.Drawing.Size(258, 24);
+            this.cbDanhMuc.TabIndex = 0;
+            // 
             // flowTable
             // 
+            this.flowTable.AutoScroll = true;
             this.flowTable.Location = new System.Drawing.Point(12, 43);
             this.flowTable.Name = "flowTable";
             this.flowTable.Size = new System.Drawing.Size(527, 601);
             this.flowTable.TabIndex = 5;
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.Location = new System.Drawing.Point(318, 14);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(96, 71);
-            this.btnThanhToan.TabIndex = 3;
-            this.btnThanhToan.Text = "Thanh Toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
-            // 
-            // btnGiamGia
-            // 
-            this.btnGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiamGia.Location = new System.Drawing.Point(177, 14);
-            this.btnGiamGia.Name = "btnGiamGia";
-            this.btnGiamGia.Size = new System.Drawing.Size(96, 43);
-            this.btnGiamGia.TabIndex = 4;
-            this.btnGiamGia.Text = "Giảm Giá";
-            this.btnGiamGia.UseVisualStyleBackColor = true;
-            // 
-            // ggcount
-            // 
-            this.ggcount.Location = new System.Drawing.Point(177, 63);
-            this.ggcount.Name = "ggcount";
-            this.ggcount.Size = new System.Drawing.Size(96, 22);
-            this.ggcount.TabIndex = 4;
-            this.ggcount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cbChuyenBan
-            // 
-            this.cbChuyenBan.FormattingEnabled = true;
-            this.cbChuyenBan.Location = new System.Drawing.Point(15, 61);
-            this.cbChuyenBan.Name = "cbChuyenBan";
-            this.cbChuyenBan.Size = new System.Drawing.Size(109, 24);
-            this.cbChuyenBan.TabIndex = 2;
-            // 
-            // btnChuyenBan
-            // 
-            this.btnChuyenBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuyenBan.Location = new System.Drawing.Point(15, 12);
-            this.btnChuyenBan.Name = "btnChuyenBan";
-            this.btnChuyenBan.Size = new System.Drawing.Size(109, 43);
-            this.btnChuyenBan.TabIndex = 5;
-            this.btnChuyenBan.Text = "Chuyển bàn";
-            this.btnChuyenBan.UseVisualStyleBackColor = true;
             // 
             // QuanLy
             // 
@@ -251,9 +252,9 @@
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ggcount)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ggcount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

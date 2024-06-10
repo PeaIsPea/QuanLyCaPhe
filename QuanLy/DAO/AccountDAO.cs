@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuanLy.DAO
 {
@@ -20,9 +21,9 @@ namespace QuanLy.DAO
 
         public bool Login(string username, string password)
         {
-            string query = "Select * from dbo.Account Where Username  = N'"+ username + "' AND PassWord = N'" + password + "' ";
+            string query = "USP_Login @userName , @passWord";
 
-            DataTable res = DataProvider.Instance.ExecuteQuery(query);
+            DataTable res = DataProvider.Instance.ExecuteQuery(query, new object[] {username,password});
             return res.Rows.Count > 0;
         }
     }

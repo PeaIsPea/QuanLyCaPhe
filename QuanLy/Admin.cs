@@ -17,8 +17,11 @@ namespace QuanLy
         public fAdmin()
         {
             InitializeComponent();
+
+            
        
         }
+
 
         
 
