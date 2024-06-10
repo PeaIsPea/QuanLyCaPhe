@@ -17,23 +17,10 @@ namespace QuanLy
         public fAdmin()
         {
             InitializeComponent();
-            LoadAccountList();
+       
         }
 
-        void LoadFoodList()
-        {
-            string query = "select * from food";
-
-            dgThucAn.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
-
-        void LoadAccountList()
-        {
-
-            string query = "EXEC dbo.USP_GetAccountByUserName @userName";
-            
-            dgTaiKhoan.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[] {"Admin"});
-        }
+        
 
 
 

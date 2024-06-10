@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLy.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +20,30 @@ namespace QuanLy
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            QuanLy f = new QuanLy();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+
+            string username =txtUser.Text;
+            string password = txtPass.Text;
+            if (Login(username, password))
+            {
+                QuanLy f = new QuanLy();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Sai thông tin đăng nhập!!");
+            }
+
+            
+        }
+
+        bool Login(string username,string password)
+        {
+
+
+            return AccountDAO.Insance.Login(username,password);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
