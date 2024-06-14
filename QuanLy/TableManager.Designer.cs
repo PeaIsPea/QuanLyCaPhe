@@ -35,6 +35,10 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listHoaDon = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.cbChuyenBan = new System.Windows.Forms.ComboBox();
@@ -47,10 +51,7 @@
             this.cbThucAn = new System.Windows.Forms.ComboBox();
             this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.flowTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -67,14 +68,14 @@
             this.thôngTinTàiKhoảnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1075, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1075, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(67, 26);
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
@@ -84,7 +85,7 @@
             this.thôngTinCáNhânToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // thôngTinCáNhânToolStripMenuItem
@@ -125,8 +126,29 @@
             this.listHoaDon.UseCompatibleStateImageBehavior = false;
             this.listHoaDon.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên món";
+            this.columnHeader1.Width = 117;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số lượng";
+            this.columnHeader2.Width = 103;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn giá";
+            this.columnHeader3.Width = 85;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 108;
+            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtTongTien);
             this.panel3.Controls.Add(this.btnChuyenBan);
             this.panel3.Controls.Add(this.cbChuyenBan);
             this.panel3.Controls.Add(this.ggcount);
@@ -134,7 +156,7 @@
             this.panel3.Controls.Add(this.btnThanhToan);
             this.panel3.Location = new System.Drawing.Point(565, 545);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(428, 99);
+            this.panel3.Size = new System.Drawing.Size(498, 99);
             this.panel3.TabIndex = 3;
             // 
             // btnChuyenBan
@@ -157,7 +179,7 @@
             // 
             // ggcount
             // 
-            this.ggcount.Location = new System.Drawing.Point(177, 63);
+            this.ggcount.Location = new System.Drawing.Point(130, 63);
             this.ggcount.Name = "ggcount";
             this.ggcount.Size = new System.Drawing.Size(96, 22);
             this.ggcount.TabIndex = 4;
@@ -166,7 +188,7 @@
             // btnGiamGia
             // 
             this.btnGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiamGia.Location = new System.Drawing.Point(177, 14);
+            this.btnGiamGia.Location = new System.Drawing.Point(130, 14);
             this.btnGiamGia.Name = "btnGiamGia";
             this.btnGiamGia.Size = new System.Drawing.Size(96, 43);
             this.btnGiamGia.TabIndex = 4;
@@ -176,7 +198,7 @@
             // btnThanhToan
             // 
             this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.Location = new System.Drawing.Point(318, 14);
+            this.btnThanhToan.Location = new System.Drawing.Point(387, 14);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(96, 71);
             this.btnThanhToan.TabIndex = 3;
@@ -245,25 +267,18 @@
             this.flowTable.Size = new System.Drawing.Size(527, 601);
             this.flowTable.TabIndex = 5;
             // 
-            // columnHeader1
+            // txtTongTien
             // 
-            this.columnHeader1.Text = "Tên món";
-            this.columnHeader1.Width = 117;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 103;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 85;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 108;
+            this.txtTongTien.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.ForeColor = System.Drawing.Color.Red;
+            this.txtTongTien.Location = new System.Drawing.Point(238, 43);
+            this.txtTongTien.Multiline = true;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(143, 36);
+            this.txtTongTien.TabIndex = 6;
+            this.txtTongTien.Text = "0";
+            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // QuanLy
             // 
@@ -283,6 +298,7 @@
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ggcount)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numCount)).EndInit();
@@ -315,5 +331,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.TextBox txtTongTien;
     }
 }

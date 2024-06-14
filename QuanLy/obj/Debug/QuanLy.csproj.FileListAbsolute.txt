@@ -11,3 +11,16 @@ D:\đồ án cá nhân\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.pdb
 D:\đồ án cá nhân\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.QuanLy.resources
 D:\đồ án cá nhân\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.AccountProfile.resources
 D:\đồ án cá nhân\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.fAdmin.resources
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\bin\Debug\QuanLy.exe.config
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\bin\Debug\QuanLy.exe
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\bin\Debug\QuanLy.pdb
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.csproj.AssemblyReference.cache
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.AccountProfile.resources
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.fAdmin.resources
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.login.resources
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.Properties.Resources.resources
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.QuanLy.resources
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.csproj.GenerateResource.cache
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.csproj.CoreCompileInputs.cache
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.exe
+D:\doancanhan\QuanLyCaPhe\QuanLy\QuanLy\obj\Debug\QuanLy.pdb

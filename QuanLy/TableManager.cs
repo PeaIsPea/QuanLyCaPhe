@@ -6,8 +6,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
@@ -54,16 +56,24 @@ namespace QuanLy
 
             listHoaDon.Items.Clear();
             List<Menu> lisBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
+            float TongTien = 0;
+
+
             foreach(Menu item in lisBillInfo)
             {
                 ListViewItem listViewItem = new ListViewItem(item.FoodName.ToString());
                 listViewItem.SubItems.Add(item.Count.ToString());
                 listViewItem.SubItems.Add(item.Price.ToString());
                 listViewItem.SubItems.Add(item.TotalPrice.ToString());
+                TongTien += item.TotalPrice;
 
 
                 listHoaDon.Items.Add(listViewItem);
             }
+            CultureInfo culture = new CultureInfo("vi-VN");
+            
+            txtTongTien.Text = TongTien.ToString("c", culture);
+            
         }
         #endregion
 
