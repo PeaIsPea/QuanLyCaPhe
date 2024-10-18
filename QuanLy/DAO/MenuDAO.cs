@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyQuanCafe.DAO
+namespace QuanLy.DAO
 {
     public class MenuDAO
     {
@@ -26,7 +26,7 @@ namespace QuanLyQuanCafe.DAO
             List<Menu> listMenu = new List<Menu>();
 
             string query = "SELECT f.name, bi.count, f.price, f.price*bi.count AS totalPrice FROM dbo.BillInfo AS bi, dbo.Bill AS b, dbo.Food AS f WHERE bi.idBill = b.id AND bi.idFood = f.id AND b.status = 0 AND b.idTable = " + id;
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            DataTable data = DataPro.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
             {

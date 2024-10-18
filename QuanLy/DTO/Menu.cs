@@ -21,7 +21,7 @@ namespace QuanLy.DTO
 
         public Menu(DataRow row)
         {
-            this.FoodName =  row["Name"].ToString();
+            this.FoodName = row["Name"].ToString();
             this.Count = (int)row["count"];
             this.Price = (float)Convert.ToDouble(row["price"].ToString());
             this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"].ToString());

@@ -14,28 +14,44 @@ namespace QuanLy.DAO
 
         public static TableDAO Instance
         {
-            get { if (instance == null) instance = new TableDAO(); return TableDAO.instance; }
-            private set { TableDAO.instance = value; }
+            get
+            {
+                if(instance == null)
+                {
+                    instance = new TableDAO();
+                }
+                return TableDAO.instance;
+            }
+            private set
+            {
+                TableDAO.instance = value;
+            }
         }
 
-        public static int TableWidth = 118;
-        public static int TableHeight = 90;
+        public static int TableWidth = 80;
+        public static int TableHeight = 80;
+
+
 
         private TableDAO() { }
 
+        public void DoiBan(int id1, int id2)
+        {
+            DataPro.Instance.ExecuteQuery("USP_DoiBan @idTable1 , @idTable2", new object[] {id1, id2});
+
+        }
+
         public List<Table> LoadTableList()
         {
-            List<Table> tableList = new List<Table>();
-
-            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetTableList");
-
+            List<Table> list = new List<Table>();
+            DataTable data = DataPro.Instance.ExecuteQuery("USP_GetTableList");
             foreach (DataRow item in data.Rows)
             {
                 Table table = new Table(item);
-                tableList.Add(table);
+                list.Add(table);
+                
             }
-
-            return tableList;
+            return list;
         }
     }
 }
